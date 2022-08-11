@@ -1,0 +1,23 @@
+NAME = megaphone
+
+GG = g++
+
+VERSION = -std=c++98  -Wall -Wextra -Werror
+
+
+SRC =	megaphone.cpp \
+
+OBJECTS = $(SRC:.cpp=.opp)
+
+all: $(NAME)
+
+$(NAME): $(OBJECTS)
+	$(GG) $(VERSION) $(OBJECTS) -o $(NAME)
+
+%.opp : %.cpp
+	$(GG) $(VERSION)  -o $@ -c $<
+
+fclean:
+	rm -rf $(NAME)
+
+re: fclean all

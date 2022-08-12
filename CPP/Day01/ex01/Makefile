@@ -1,11 +1,14 @@
-NAME = megaphone
+NAME = Zombie
 
 GG = g++
+
+Header1 =  Zombie.hpp
 
 VERSION = -std=c++98  -Wall -Wextra -Werror
 
 
-SRC =	megaphone.cpp \
+SRC =	Zombie.cpp	\
+		main.cpp	\
 
 OBJECTS = $(SRC:.cpp=.opp)
 

@@ -12,17 +12,19 @@ SRC =	Contact.cpp		\
 		PhoneBook.cpp	\
 		main.cpp		\
 
-OBJ = $(SRC:.cpp=.opp)
+OBJECTS = $(SRC:.cpp=.opp)
 
 all: $(NAME)
 
-$(NAME):  
-	$(GG) $(VERSION) $(OBJ) -o $(NAME)
+$(NAME): $(OBJECTS)
+	$(GG) $(VERSION) $(OBJECTS) -o $(NAME)
 
-%.opp : %.cpp $(Header1) $(Header2)
+%.opp : %.cpp
 	$(GG) $(VERSION)  -o $@ -c $<
 
-fclean:
-	@rm -rf $(NAME)
+clean:
+	rm -rf $(OBJECTS)
+fclean: clean
+	rm -rf $(NAME)
 
 re: fclean all

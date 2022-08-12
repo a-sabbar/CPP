@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/28 14:08:52 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/12 17:24:37 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/11 17:57:39 by asabbar           #+#    #+#             */
+/*   Updated: 2022/08/12 17:17:44 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef FIXED_HPP
+#define FIXED_HPP
 
-int main(int ac, char **av)
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+class Fixed
 {
-    if(ac == 1)
-        return(std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl, 0);
-    for(int i = 1; i < ac; i++)
-    {
-        for(size_t j = 0; j < strlen(av[i]); j++)
-            std::cout << (char) toupper(av[i][j]);
-    }
-    std::cout << std::endl;
-}
+	private:
+		int					fixed_value;
+		static const int	f_bit;
+	public:
+		Fixed();
+		Fixed(Fixed &fixed);
+		int getRawBits( void ) const;
+		void setRawBits( int const raw );
+		void operator = (const Fixed &X );
+		~Fixed();
+};
+
+#endif

@@ -1,11 +1,14 @@
-NAME = megaphone
+NAME = Hacds
 
 GG = g++
+
+Header1 =  Harl.hpp
 
 VERSION = -std=c++98  -Wall -Wextra -Werror
 
 
-SRC =	megaphone.cpp \
+SRC =	Harl.cpp	\
+		main.cpp	\
 
 OBJECTS = $(SRC:.cpp=.opp)
 

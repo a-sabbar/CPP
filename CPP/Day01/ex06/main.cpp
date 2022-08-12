@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:02:42 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/11 11:38:25 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/12 18:03:55 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,5 @@ int main(int ac, char **av) {
 		std::cout << "Error argm"<< std::endl;
 		return(1);
 	}
-	// X.complain(av[1]);
-	// X.complain(av[1]);
-	// X.complain(av[1]);
-	// X.complain(av[1]);
+	X.complain(av[1]);
 }

@@ -1,11 +1,11 @@
-NAME = megaphone
+NAME = Replace
 
 GG = g++
 
 VERSION = -std=c++98  -Wall -Wextra -Werror
 
 
-SRC =	megaphone.cpp \
+SRC =	main.cpp		\
 
 OBJECTS = $(SRC:.cpp=.opp)
 

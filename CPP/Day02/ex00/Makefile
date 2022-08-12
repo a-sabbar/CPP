@@ -1,11 +1,14 @@
-NAME = megaphone
+NAME = Fixed
 
 GG = g++
+
+Header1 =  Fixed.hpp
 
 VERSION = -std=c++98  -Wall -Wextra -Werror
 
 
-SRC =	megaphone.cpp \
+SRC =	Fixed.cpp	\
+		main.cpp	\
 
 OBJECTS = $(SRC:.cpp=.opp)
 

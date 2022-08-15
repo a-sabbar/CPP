@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:03:12 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/11 11:25:47 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/13 18:35:45 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,12 @@ void	Harl::error(void){
 void	Harl::complain(std::string level)
 {
     std::string tab[4];
-    Harl X;
+    Harl        X;
+    int         i;
     void (Harl::* ptf1) (void) = &Harl::debug;
     void (Harl::* ptf2) (void) = &Harl::info;
     void (Harl::* ptf3) (void) = &Harl::warning;
     void (Harl::* ptf4) (void) = &Harl::error;
-    int         i;
-
     tab[0] = "DEBUG";
     tab[1] = "INFO";
     tab[2] = "WARNING";

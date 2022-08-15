@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 15:10:35 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/10 11:21:08 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/14 12:07:49 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ void	HumanB::setWeapon(Weapon &var)
     this->var = &var;
 }
 void	HumanB::attack(){
-    std::cout << this->name << " attacks with their " << this->var->getType() << std::endl; 
+    if(this->var)
+        std::cout << this->name << " attacks with their " << this->var->getType() << std::endl; 
 }

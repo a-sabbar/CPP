@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 14:01:07 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/15 13:46:39 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 11:30:10 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ Fixed Fixed::operator+(const Fixed &X )
 }
 
 
-Fixed Fixed::operator++(void )
+Fixed Fixed::operator++(void)
 {
     this->fixed_value++;
     return (*this);

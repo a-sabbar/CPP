@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 14:01:07 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/15 13:45:49 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 11:29:08 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ Fixed::Fixed(Fixed const &F){
 
 Fixed::Fixed(const int fixed){
     std::cout << "Int constructor called" << std::endl;
-    this->fixed_value = fixed << 8;
+    this->fixed_value = fixed << this->f_bit;
 
 }
 
 Fixed::Fixed(const float fixed){
     std::cout << "Float constructor called " << std::endl;
-    this->fixed_value = (int)roundf((fixed * (1 << 8)));
+    this->fixed_value = (int)roundf((fixed * (1 << this->f_bit)));
 }
 
 
@@ -43,7 +43,7 @@ void Fixed::setRawBits(int const raw ){
 }
 
 float Fixed::toFloat( void ) const{
-    return (float)this->fixed_value  / (1 << 8);
+    return (float)this->fixed_value  / (1 << this->f_bit);
 }
 
 void Fixed::operator=(const Fixed &X )
@@ -54,7 +54,7 @@ void Fixed::operator=(const Fixed &X )
 
 int Fixed::toInt( void ) const
 {
-    return(roundf(this->fixed_value >> 8));
+    return(roundf(this->fixed_value >> this->f_bit));
 }
 
 Fixed::~Fixed(){

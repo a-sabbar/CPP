@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/07 15:17:18 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/18 22:02:19 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/19 13:43:51 by asabbar           #+#    #+#             */
+/*   Updated: 2022/08/19 13:43:52 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 
-int main(){
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-	Zombie *C;
-	int     i;
-	int     nb_zombie =10;
+# include <iostream>
+# include <string>
+#include "WrongAnimal.hpp"
 
-   C = zombieHorde(nb_zombie , "achraf");
-   i = -1;
-   	while(++i < nb_zombie)
-		C[i].announce();
-}
+class WrongCat : public WrongAnimal
+{
+
+	public:
+		WrongCat();
+		void	makeSound(void)const;
+		~WrongCat();
+
+};
+
+#endif

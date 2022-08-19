@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/07 15:17:18 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/18 22:02:19 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/17 23:01:33 by asabbar           #+#    #+#             */
+/*   Updated: 2022/08/19 16:17:14 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 
-int main(){
 
-	Zombie *C;
-	int     i;
-	int     nb_zombie =10;
+#ifndef DOG_HPP
+# define DOG_HPP
 
-   C = zombieHorde(nb_zombie , "achraf");
-   i = -1;
-   	while(++i < nb_zombie)
-		C[i].announce();
-}
+# include <iostream>
+# include <string>
+# include "Animal.hpp"
+# include "Brain.hpp"
+
+class Dog: public Animal
+{
+	private:
+		Brain *B;
+	public:
+		Dog();
+		Dog(const Dog & obj);
+		void	makeSound()const;
+		~Dog();
+};
+
+#endif 

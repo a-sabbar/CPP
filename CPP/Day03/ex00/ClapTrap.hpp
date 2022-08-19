@@ -1,25 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/07 15:17:18 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/18 22:02:19 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/15 15:28:05 by asabbar           #+#    #+#             */
+/*   Updated: 2022/08/15 18:39:24 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef CLAPTRAP_H
+#define CLAPTRAP_H
 
-int main(){
+#include <iostream>
+#include <string>
+#include <iomanip>
 
-	Zombie *C;
-	int     i;
-	int     nb_zombie =10;
+class ClapTrap
+{
+	private:
+		std::string Name;
+		int         Hit;
+		int			Energy;
+		int			Attack_damage;
+	public:
+		ClapTrap();
+		ClapTrap(std::string name);
+		void	attack(const std::string& target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
+		~ClapTrap();
+};
 
-   C = zombieHorde(nb_zombie , "achraf");
-   i = -1;
-   	while(++i < nb_zombie)
-		C[i].announce();
-}
+
+#endif

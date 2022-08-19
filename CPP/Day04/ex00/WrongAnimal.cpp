@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/07 15:17:18 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/18 22:02:19 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/19 12:23:14 by asabbar           #+#    #+#             */
+/*   Updated: 2022/08/19 12:35:38 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "WrongAnimal.hpp"
 
-int main(){
+WrongAnimal::WrongAnimal() : type("Null")
+{
+	std::cout << "Constructor WrongAnimal" << std::endl;
+}
 
-	Zombie *C;
-	int     i;
-	int     nb_zombie =10;
+std::string	WrongAnimal::getType()const
+{
+	return this->type;
+}
 
-   C = zombieHorde(nb_zombie , "achraf");
-   i = -1;
-   	while(++i < nb_zombie)
-		C[i].announce();
+void	WrongAnimal::makeSound(void)const
+{
+	std::cout << "Animal sound" << std::endl;
+}
+
+WrongAnimal::~WrongAnimal()
+{
+	std::cout << "Constructor WrongAnimal" << std::endl;
 }

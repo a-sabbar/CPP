@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/07 15:17:18 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/18 22:02:19 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/17 23:01:55 by asabbar           #+#    #+#             */
+/*   Updated: 2022/08/19 17:12:25 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Animal.hpp"
 
-int main(){
+Animal::Animal() : type("Null")
+{
+	std::cout << "Constructor Animal" << std::endl;
+}
 
-	Zombie *C;
-	int     i;
-	int     nb_zombie =10;
+std::string	Animal::getType()const
+{
+	return this->type;
+}
 
-   C = zombieHorde(nb_zombie , "achraf");
-   i = -1;
-   	while(++i < nb_zombie)
-		C[i].announce();
+Animal::~Animal()
+{
+	std::cout << "Destructor Animal" << std::endl;
 }

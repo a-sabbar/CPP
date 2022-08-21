@@ -6,13 +6,14 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 12:27:42 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/06 14:06:51 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 22:41:32 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 Contact::Contact(){
+
 	
 }
 Contact::~Contact(){

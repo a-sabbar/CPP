@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 15:17:13 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/07 19:55:08 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 22:41:40 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ void randomChump( std::string name ){
     New->setName(name);
     New->announce();
     delete(New);
+    
 }

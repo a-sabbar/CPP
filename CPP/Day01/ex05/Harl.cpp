@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:03:12 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/13 18:35:45 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 22:42:25 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	Harl::error(void){
     
     std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
+
 
 void	Harl::complain(std::string level)
 {

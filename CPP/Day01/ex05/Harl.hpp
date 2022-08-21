@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:03:09 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/10 15:52:59 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 22:42:27 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ class Harl
 		void	complain(std::string level);
 		~Harl();
 };
+
 
 #endif

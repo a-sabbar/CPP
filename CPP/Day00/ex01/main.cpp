@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 15:59:49 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/07 16:13:53 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 22:41:27 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ bool isNumber(std::string str)
 	}
     return true;
 }
+
 
 void	print_info(Phonebook C, int index)
 {

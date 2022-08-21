@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/28 14:54:35 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/07 12:48:10 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 22:41:21 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ Phonebook::~Phonebook(){
 	
 }
 
-
-
 void    Phonebook::setFirstName_phone(std::string new_name, int i)
 {
 	this->info[i].setFirstName(new_name);
@@ -31,8 +29,6 @@ std::string Phonebook::getFirstName_phone(int i)
 {
 	return this->info[i].getFirstName();
 }
-
-
 
 void    Phonebook::setlastName_phone(std::string new_name, int i)
 {

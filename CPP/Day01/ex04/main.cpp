@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/09 13:29:22 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/09 17:57:16 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 22:42:21 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	ft_replace(std::string line, std::string s1, std::string s2, std::ofstream 
 		newfile << line[i];
 	}
 }
+
 
 int main(int ac, char **av)
 {

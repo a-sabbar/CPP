@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:03:12 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/11 11:35:32 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/19 22:42:37 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	Harl::warning(void){
     std::cout << " [ WARNING ]\n" << std::endl;
     std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month.\n" << std::endl;
 }
+
 void	Harl::error(void){
     
     std::cout << " [ ERROR ]\n" << std::endl;

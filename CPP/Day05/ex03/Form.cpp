@@ -6,14 +6,14 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 14:21:04 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/21 16:16:03 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/22 00:26:48 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-Form::Form():grade_s(1), grade_e(1)
+Form::Form():grade_s(150), grade_e(150)
 {
 }
 Form::Form(std::string name, int g_s, int g_e) : name(name), sign (false), grade_s(g_s), grade_e(g_e)

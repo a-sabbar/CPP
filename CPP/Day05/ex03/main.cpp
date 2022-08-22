@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 22:58:18 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/22 00:12:30 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/22 00:53:04 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,23 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "Form.hpp"
+#include "Intern.hpp"
 
 int main()
 {
-		std::cout << std::endl;
+	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;
 	try
 	{
 		Bureaucrat				bob("Bob", 1);
 		Bureaucrat				bill("Bill", 142);
-		ShrubberyCreationForm	shrub("shrub");
+		Intern someRandomIntern;
+		Form * rrf;
+		rrf = someRandomIntern.makeForm("shrubbery request", "Bender");
 
-		shrub.beSigned(bill);
-		shrub.execute(bill);
+		rrf->beSigned(bob);
+		rrf->execute(bob);
 	}
 	catch(const std::exception& e)
 	{

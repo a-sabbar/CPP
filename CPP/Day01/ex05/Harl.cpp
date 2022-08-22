@@ -6,12 +6,11 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:03:12 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 22:42:25 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/21 21:17:42 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-
 
 Harl::Harl()
 {
@@ -22,11 +21,11 @@ void	Harl::debug(void){
 }
 void	Harl::info(void){
     
-    std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
+    std::cout << "I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" << std::endl;
 }
 void	Harl::warning(void){
     
-    std::cout << "I think I deserve to have some extra bacon for free. I’ve been coming for years whereas you started working here since last month." << std::endl;
+    std::cout << "I think I deserve to have some extra bacon for free. I've been coming for years whereas you started working here since last month." << std::endl;
 }
 void	Harl::error(void){
     
@@ -64,7 +63,6 @@ void	Harl::complain(std::string level)
     case 3:
         (X.*ptf4) ();
         break;
-    
     default:
         break;
     }

@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 00:07:36 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/22 00:46:34 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/22 12:18:10 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,13 @@ Form	*Intern::makeForm(std::string name, std::string target)
 		}
 		return(ret);
 	}
-	std::cout << tab[i].compare(name) <<" name not found !!\n";
-	return(NULL);
+	throw error;
 }
+const char* Intern::Error::what() const throw()
+{
+	return "Error : name not found !!\n";
+}
+
 Intern::~Intern()
 {
 }

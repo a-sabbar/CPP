@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 16:06:36 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/23 14:30:38 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/10 11:03:09 by asabbar           #+#    #+#             */
+/*   Updated: 2022/08/19 22:42:27 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-# define SHRUBBERYCREATIONFORM_HPP
+#ifndef HARL_H
+#define HARL_H
 
-# include <iostream>
-# include <string>
-#include <fstream>
-#include "Form.hpp"
-#include "Bureaucrat.hpp"
+#include <iostream>
+#include <string>
 
-class ShrubberyCreationForm : public Form
-{
-	private:
-		std::string	target;
+
+class Harl
+{	
 	public:
-		ShrubberyCreationForm(std::string	target);
-		void		execute(Bureaucrat const & executor) const;
-		~ShrubberyCreationForm();
+		Harl();
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
+		void	complain(std::string level);
+		~Harl();
 };
 
-#endif 
+
+#endif

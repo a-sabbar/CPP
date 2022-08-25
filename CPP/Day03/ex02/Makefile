@@ -1,6 +1,6 @@
 NAME = ClapTrap
 
-GG = g++
+GG = c++
 
 Header1 =  ClapTrap.hpp 
 Header2 =  ClapTrap.hpp 

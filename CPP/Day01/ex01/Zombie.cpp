@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 15:17:13 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 22:41:52 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/24 22:45:56 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,7 @@ Zombie *newZombie( std::string name ){
 void randomChump( std::string name ){
 	Zombie *New;
 
-	New = new Zombie;
-	New->setName(name);
+	New = newZombie(name);
 	New->announce();
 	delete(New);
 }
@@ -50,11 +49,8 @@ Zombie*	zombieHorde( int N, std::string name ){
 	int		i;
 
 	New = new Zombie[N];
-	i = 0;
-	while(i < N)
-	{
+	i = -1;
+	while(++i < N)
 		New[i].setName(name);
-		i++;
-	}
 	return New;
 }

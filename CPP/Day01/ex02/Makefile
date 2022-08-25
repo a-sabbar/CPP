@@ -1,6 +1,6 @@
 NAME = BRAIN
 
-GG = g++
+GG = c++
 
 VERSION = -std=c++98  -Wall -Wextra -Werror
 

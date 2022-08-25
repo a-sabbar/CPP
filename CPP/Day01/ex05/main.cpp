@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/10 11:02:42 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 22:42:29 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/24 14:05:31 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 int main() {
 
 	Harl X;
-	// X.complain("ERROR");
+	X.complain("ERROR");
+	std::cout <<std::endl;
 	X.complain("DEBUG");
-	// X.complain("INFO");
-	// X.complain("WARNING");
+	std::cout <<std::endl;
+	X.complain("INFO");
+	std::cout <<std::endl;
+	X.complain("WARNING");
+	std::cout <<std::endl;
+	X.complain("dfvdf");
 }

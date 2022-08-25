@@ -1,6 +1,6 @@
 NAME = Polymorphism
 
-GG = g++
+GG = c++
 
 Header1 =  Animal.hpp
 Header2 = Cat.hpp 

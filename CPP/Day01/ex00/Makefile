@@ -1,6 +1,6 @@
 NAME = Zombie
 
-GG = g++
+GG = c++
 
 Header1 =  Zombie.hpp
 
@@ -14,10 +14,10 @@ OBJECTS = $(SRC:.cpp=.opp)
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS) $(Header1)
+$(NAME): $(OBJECTS) 
 	$(GG) $(VERSION) $(OBJECTS) -o $(NAME)
 
-%.opp : %.cpp 
+%.opp : %.cpp $(Header1)
 	$(GG) $(VERSION)  -o $@ -c $<
 
 clean:

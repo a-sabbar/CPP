@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 22:58:18 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/22 12:14:16 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/23 14:46:19 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main()
 		Bureaucrat				bill("Bill", 142);
 		Intern someRandomIntern;
 		Form * rrf;
-		rrf = someRandomIntern.makeForm("rgt request", "Bender");
+		rrf = someRandomIntern.makeForm("shrubbery request", "Bender");
 
 		rrf->beSigned(bob);
 		rrf->execute(bob);

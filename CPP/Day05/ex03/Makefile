@@ -1,6 +1,6 @@
 NAME = Bureaucrat
 
-GG = g++
+GG = c++
 
 Header1 =  Bureaucrat.hpp
 Header2 =  Form.hpp

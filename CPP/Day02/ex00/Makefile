@@ -1,6 +1,6 @@
 NAME = Fixed
 
-GG = g++
+GG = c++
 
 Header1 =  Fixed.hpp
 
@@ -17,7 +17,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(GG) $(VERSION) $(OBJECTS) -o $(NAME)
 
-%.opp : %.cpp
+%.opp : %.cpp $(Header1)
 	$(GG) $(VERSION)  -o $@ -c $<
 
 clean:

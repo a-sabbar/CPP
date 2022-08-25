@@ -1,6 +1,6 @@
 NAME = PHONEBOOK
 
-GG = g++
+GG = c++
 
 Header1 =  PhoneBook.hpp
 Header2 =  Contact.hpp
@@ -16,7 +16,7 @@ OBJECTS = $(SRC:.cpp=.opp)
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
+$(NAME): $(OBJECTS) $(Header2) $(Header1)
 	$(GG) $(VERSION) $(OBJECTS) -o $(NAME)
 
 %.opp : %.cpp

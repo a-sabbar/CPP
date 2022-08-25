@@ -1,6 +1,6 @@
 NAME = Fixed
 
-GG = g++
+GG = c++
 
 Header1 =  Fixed.hpp 
 

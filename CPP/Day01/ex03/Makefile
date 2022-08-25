@@ -1,10 +1,10 @@
 NAME = Weapon
 
-GG = g++
+GG = c++
 
 Header1 =  HumanA.hpp
 Header2 =  HumanB.hpp
-Header2 =  Weapon.hpp
+Header3 =  Weapon.hpp
 
 VERSION = -std=c++98  -Wall -Wextra -Werror
 
@@ -21,7 +21,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(GG) $(VERSION) $(OBJECTS) -o $(NAME)
 
-%.opp : %.cpp
+%.opp : %.cpp $(Header1) $(Header2) $(Header3)
 	$(GG) $(VERSION)  -o $@ -c $<
 
 clean:

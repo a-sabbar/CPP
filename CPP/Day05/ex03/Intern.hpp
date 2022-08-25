@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 00:20:19 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/22 12:17:45 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/23 14:35:04 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ class Intern
 	public:
 
 		Intern();
-		Form	*makeForm(std::string name, std::string target);
+		Form		*makeForm(std::string name, std::string target);
+		Form		*ShrubberyForm(std::string	target);
+		Form		*RobotomyForm(std::string	target);
+		Form		*PresidentialForm(std::string	target);
 		~Intern();
 		class	Error: public std::exception
 		{

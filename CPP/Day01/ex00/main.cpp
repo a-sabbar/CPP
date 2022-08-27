@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 15:17:18 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 22:41:43 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/26 11:57:59 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main(){
 /*****************First Function*******************/
     C = newZombie("achraf");
     C->announce();
+    delete(C);
 /*****************second Function*******************/
     randomChump("sabbar");
-    delete(C);
 }

@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 15:17:13 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/24 22:45:35 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/26 11:58:10 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ Zombie::Zombie()
 
 Zombie::~Zombie()
 {
+    std::cout << "Destructor called" << std::endl;
 }
 void     Zombie::setName(std::string New_name)
 {

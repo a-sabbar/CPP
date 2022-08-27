@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:13:32 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/25 14:50:46 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/27 13:56:37 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ bool isint(std::string str)
 	i = -1;
 	while(str[++i])
 	{
-		if(!isdigit(str[i])&& str[0] != '-' && str[0] != '+')
+		if(!isdigit(str[i]) && str[i] != '-' && str[i] != '+')
 			return false;
 	}
     return true;
@@ -34,7 +34,7 @@ bool isfloat(std::string str)
 	i = -1;
 	while(str[++i])
 	{
-		if(!isdigit(str[i]) && str[0] != '-' && str[0] != '+')
+		if(!isdigit(str[i]) && str[i] != '-' && str[i] != '+')
 			break;
 	}
     if (str[i] == '.')
@@ -58,51 +58,15 @@ bool isfloat(std::string str)
         return true;
     return false;
 }
-bool check(std::string str, char c)
-{
-   int i;
-
-    if(c == 'F')
-    {
-        i = -1;
-        while(str[++i])
-        {
-            if(!isdigit(str[i]) && str[0] != '-' && str[0] != '+')
-                break;
-        }
-        i++;
-        if (str[i] == '0' && str[i + 1] == 'f')
-        {
-            return true;
-        }
-        return false;        
-    }
-    if(c == 'D')
-    {
-        i = -1;
-        while(str[++i])
-        {
-            if(!isdigit(str[i]) && str[0] != '-' && str[0] != '+')
-                break;
-        }
-        i++;
-        if (str[i] == '0' && str[i + 1] == '\0')
-        {
-            return true;
-        }
-        return false;        
-    }
-    return false;        
-}
 
 bool isdouble(std::string str)
 {
-   int i;
+    int i;
 
 	i = -1;
 	while(str[++i])
 	{
-		if(!isdigit(str[i]) && str[0] != '-' && str[0] != '+')
+		if(!isdigit(str[i]) && str[i] != '-' && str[i] != '+')
 			break;
 	}
     if (str[i] == '.')
@@ -118,35 +82,28 @@ bool isdouble(std::string str)
     return true;
 }
 
-int main(int ac, char **av)
+void    ft_int(std::string value)
 {
-    if(ac != 2)
+    std::cout << "int" << std::endl;
+    int nb = std::stoi(value);
+    std::cout << "char   :  ";
+    if(isprint(nb))
     {
-        std::cout << "Erorr Argm \n";
-        return (1);
+        char c = static_cast<char>(nb);
+        std::cout << "'" <<c << "'" << std::endl;
     }
-    std::string value = av[1];
-    if(isint(value))
-    {
-        std::cout << "int" << std::endl;
-        int nb = std::stoi(value);
-        std::cout << "char   :  ";
-        if(isprint(nb))
-        {
-            char c = static_cast<char>(nb);
-            std::cout << "'" <<c << "'" << std::endl;
-        }
-        else
-            std::cout << "Non displayable" << std::endl;
-        std::cout << "int    :  ";
-        std::cout << nb << std::endl;
-        std::cout << "float  :  ";
-        std::cout <<std::fixed<<std::setprecision(1)<< static_cast<float>(nb) << 'f'<< std::endl;
-        std::cout << "double :  ";
-        std::cout <<static_cast<double>(nb) << std::endl;
-    }
-    else if (isfloat(value))
-    {
+    else
+        std::cout << "Non displayable" << std::endl;
+    std::cout << "int    :  ";
+    std::cout << nb << std::endl;
+    std::cout << "float  :  ";
+    std::cout <<std::fixed<<std::setprecision(1)<< static_cast<float>(nb) << 'f'<< std::endl;
+    std::cout << "double :  ";
+    std::cout <<static_cast<double>(nb) << std::endl;
+}
+
+void    ft_float(std::string value)
+{
         std::cout << "float" << std::endl;
         float nb = std::stof(value);
         std::cout << "char   :  ";
@@ -156,19 +113,17 @@ int main(int ac, char **av)
             std::cout << "'" <<c << "'" << std::endl;
         }
         else
-            std::cout << "Non displayable" << std::endl;
+        std::cout << "Non displayable" << std::endl;
         std::cout << "int    :  ";
         std::cout << static_cast<int>(nb) << std::endl;
         std::cout << "float  :  ";
         std::cout << value << std::endl;
         std::cout << "double :  ";
-        if(check(value, 'F'))
-            std::cout <<std::fixed<<std::setprecision(1)<< static_cast<double>(nb)<< std::endl;
-        else
-            std::cout << static_cast<double>(nb)<< std::endl;
-    }
-    else if (isdouble(value))
-    {
+        std::cout <<std::fixed<<std::setprecision(1)<< static_cast<double>(nb)<< std::endl;
+}
+
+void    ft_double(std::string value)
+{
         std::cout << "double" << std::endl;
         double nb = std::stod(value);
         std::cout << "char   :  ";
@@ -182,15 +137,12 @@ int main(int ac, char **av)
         std::cout << "int    :  ";
         std::cout << static_cast<int>(nb) << std::endl;
         std::cout << "float  :  ";
-        if(check(value, 'D'))
-            std::cout <<std::fixed<<std::setprecision(1)<< static_cast<float>(nb) <<'f'<< std::endl;
-        else
-            std::cout << static_cast<float>(nb) <<'f'<< std::endl;
-        std::cout << "double :  ";
-        std::cout << value << std::endl;
-    }
-    else if(value.length() == 1)
-    {
+        std::cout <<std::fixed<<std::setprecision(1)<< static_cast<float>(nb) <<'f'<< std::endl;
+        std::cout << "double :  "<<std::fixed<<std::setprecision(1)<< nb << std::endl;
+}
+
+void    ft_char(std::string value)
+{
         std::cout << "char   :  " << value << std::endl;
         std::cout << "int    :  ";
         std::cout << static_cast<int>(value[0]) << std::endl;
@@ -198,21 +150,66 @@ int main(int ac, char **av)
         std::cout <<std::fixed<<std::setprecision(1) << static_cast<float>(value[0])<< 'f'<< std::endl;
         std::cout << "double :  ";
         std::cout << static_cast<double>(value[0]) << std::endl;
-    }
-    else if (!value.compare("nan"))
+        
+}
+void    pseudo_literals(std::string value)
+{
+    if (!value.compare("nan"))
     {
+        double nb = std::stod(value);
+        float nb1 = std::stof(value);
         std::cout << "char   :  " << "impossible" << std::endl;
         std::cout << "int    :  "<< "impossible" << std::endl;
-        std::cout << "float  :  " << "nanf"<< std::endl;
-        std::cout << "double :  "<< "nan"<< std::endl;
+        std::cout << "float  :  " << nb1 << "f"<< std::endl;
+        std::cout << "double :  "<< nb << std::endl;
     }
     else if (!value.compare("inf"))
     {
+        double nb = std::stod(value);
+        float nb1 = std::stof(value);
         std::cout << "char   :  " << "impossible" << std::endl;
         std::cout << "int    :  "<< "impossible" << std::endl;
-        std::cout << "float  :  " << "nanf"<< std::endl;
-        std::cout << "double :  "<< static_cast<double>(value[0])<< std::endl;
+        std::cout << "float  :  " << nb1  << "f"<< std::endl;
+        std::cout << "double :  "<< nb << std::endl;
     }
+    else if (!value.compare("+inf"))
+    {
+        double nb = std::stod(value);
+        float nb1 = std::stof(value);
+        std::cout << "char   :  " << "impossible" << std::endl;
+        std::cout << "int    :  "<< "impossible" << std::endl;
+        std::cout << "float  :  " << nb1  << "f"<< std::endl;
+        std::cout << "double :  "<< nb << std::endl;
+    }
+    else if (!value.compare("-inf"))
+    {
+        double nb = std::stod(value);
+        float nb1 = std::stof(value);
+        std::cout << "char   :  " << "impossible" << std::endl;
+        std::cout << "int    :  "<< "impossible" << std::endl;
+        std::cout << "float  :  " << nb1  << "f"<< std::endl;
+        std::cout << "double :  "<< nb << std::endl;
+    }
+}
+
+int main(int ac, char **av)
+{
+    if(ac != 2)
+    {
+        std::cout << "Erorr Argm \n";
+        return (1);
+    }
+    std::string value = av[1];
+    if(isint(value))
+        ft_int(value);
+    else if (isfloat(value))
+        ft_float(value);
+    else if (isdouble(value))
+        ft_double(value);
+    else if(value.length() == 1)
+        ft_char(value);
     else
-        std::cout << "Not Found \n";
+        pseudo_literals(value);
+    
+
 }

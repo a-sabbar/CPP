@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/21 22:51:48 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/28 14:50:37 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/28 14:45:54 by asabbar           #+#    #+#             */
+/*   Updated: 2022/08/28 14:57:01 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUESTFORM_HPP
-# define ROBOTOMYREQUESTFORM_HPP
+#include "Base.hpp"
 
-# include <iostream>
-# include <string>
-#include <cstdlib>
-#include "Bureaucrat.hpp"
-#include "Form.hpp"
 
-class RobotomyRequestForm : public Form
+Base::Base()
 {
-	private:
-		std::string target;
-	public:
-		RobotomyRequestForm(std::string target);
-		void    execute(Bureaucrat const & executor) const;
-		~RobotomyRequestForm();
-};
+}
 
-
-#endif 
+Base::~Base()
+{
+}

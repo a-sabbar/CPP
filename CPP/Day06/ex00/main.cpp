@@ -6,13 +6,14 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 21:13:32 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/27 13:56:37 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/27 14:10:04 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream> 
 #include <string>
 #include <iostream>
+#include <sstream>
 #include <iomanip>
 bool isint(std::string str)
 {
@@ -85,7 +86,8 @@ bool isdouble(std::string str)
 void    ft_int(std::string value)
 {
     std::cout << "int" << std::endl;
-    int nb = std::stoi(value);
+    int nb;
+    std::istringstream(value) >> nb;
     std::cout << "char   :  ";
     if(isprint(nb))
     {

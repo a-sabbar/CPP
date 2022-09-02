@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 17:49:06 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/17 21:41:50 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/01 11:43:31 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,48 @@
 ScavTrap::ScavTrap() 
 {
 }
+ScavTrap::ScavTrap(ScavTrap const &copy)
+{
+    *this = copy;
+}
+
 ScavTrap::ScavTrap(std::string name) 
 {
     this->Name = name;
     this->Hit = 100;
     this->Energy = 50;
     this->Attack_damage = 20;
-    std::cout << name << "  Hi ScavTrap !!"<< std::endl;
+    std::cout << name << "  :  Hi ScavTrap !!"<< std::endl;
 }
 
 void	ScavTrap::attack(const std::string& target)
 {
     if (this->Hit && this->Energy)
     {
-        std::cout << "  ScavTrap (" <<  this->Name << ") attacks ("<< target << ") ,causing " << this->Attack_damage<< " points of damage!"<< std::endl;
+        std::cout << "-> ScavTrap (" <<  this->Name << ") attacks ("<< target << ") ,causing " << this->Attack_damage<< " points of damage!"<< std::endl;
         this->Energy--;
     }
     else{
-        std::cout<< "  ScavTrap i can't attack"<< std::endl;
+        std::cout<< "-> ScavTrap i can't attack"<< std::endl;
     }
 }
 
 void	ScavTrap::guardGate()
 {
-    std::cout << "  Guard Gat  ^__^ " << std::endl;
+    std::cout << " Guard Gat  ^__^ " << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-    std::cout << this->Name << "  Good bye ScavTrap !!"<< std::endl;
+    std::cout << this->Name << "  :  good bye ScavTrap !!"<< std::endl;
+}
+
+
+void	ScavTrap::operator=(const ScavTrap &X )
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    this->Name = X.Name;
+    this->Hit = X.Hit;
+    this->Energy = X.Energy;
+    this->Attack_damage = X.Attack_damage;
 }

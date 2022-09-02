@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 22:48:38 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/21 23:01:16 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/30 16:02:24 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target)
 
 void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-    srand(time(0));
     int i = rand() % 2;
 	if(executor.getGrade() <= 25 && executor.getGrade() <= 5)
     {

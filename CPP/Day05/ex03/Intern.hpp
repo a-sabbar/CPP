@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/22 00:20:19 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/23 14:35:04 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/30 16:20:02 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Intern
 		~Intern();
 		class	Error: public std::exception
 		{
-			virtual const char* what() const throw();
+			const char* what() const throw();
 		}error;
 };
 

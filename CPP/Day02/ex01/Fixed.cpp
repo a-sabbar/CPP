@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 14:01:07 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/23 12:36:40 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/01 15:46:20 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void Fixed::operator=(const Fixed &X )
 
 int Fixed::toInt( void ) const
 {
-    return(roundf(this->fixed_value >> this->f_bit));
+    return((int)(this->fixed_value >> this->f_bit));
 }
 
 Fixed::~Fixed(){

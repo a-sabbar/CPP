@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 22:58:18 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/22 00:12:30 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/30 16:02:32 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 
 int main()
 {
-		std::cout << std::endl;
+	srand(time(NULL));
+	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;
 	try

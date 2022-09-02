@@ -5,23 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 14:47:29 by asabbar           #+#    #+#             */
-/*   Updated: 2022/09/01 11:34:14 by asabbar          ###   ########.fr       */
+/*   Created: 2022/09/02 14:52:03 by asabbar           #+#    #+#             */
+/*   Updated: 2022/09/02 23:21:49 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
 
+#include "Easyfind.hpp"
+#include <iostream>
+#include <iterator>
+#include <list>
 int main()
 {
-    ClapTrap A("achraf");
-    ClapTrap B("sabbar");
+    std::list<char> gqlist1;
+  
+    for (int i = 97; i < 107; ++i) {
+        gqlist1.push_back(i + 1);
+    }
+    std::cout << easyfind(gqlist1, 100) << std::endl;
 
-    A.attack("sabbar");
-    B.takeDamage(0);
-    A.attack("sabbar");
-    B.takeDamage(0);
-    A.attack("sabbar");
-    B.takeDamage(0);
-    B.beRepaired(10);
+    /**************************************/
+
+    std::list<int> gqlist2;
+  
+    for (int i = 0; i < 20; ++i) {
+        gqlist2.push_back(i * 1);
+    }
+    std::cout << easyfind(gqlist2, 100) << std::endl;
+    std::list<int>::iterator it;
 }

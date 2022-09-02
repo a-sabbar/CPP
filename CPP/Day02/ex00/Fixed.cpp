@@ -6,13 +6,11 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 14:01:07 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/23 12:33:55 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/01 15:59:41 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-
 
 Fixed::Fixed()
 {
@@ -20,9 +18,10 @@ Fixed::Fixed()
     this->fixed_value = 0;
 }
 
-Fixed::Fixed(Fixed &F){
+Fixed::Fixed(Fixed const &F){
     std::cout << "Copy constructor called" << std::endl;
-    this->fixed_value = F.getRawBits();
+    *this = F;
+    // this->fixed_value = F.getRawBits();
 }
 
 int Fixed::getRawBits( void ) const{

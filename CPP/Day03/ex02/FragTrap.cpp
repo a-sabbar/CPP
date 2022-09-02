@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:39:16 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/17 21:42:00 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/01 11:45:23 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,14 @@
 FragTrap::FragTrap() 
 {
 }
+
+FragTrap::FragTrap(FragTrap const &copy)
+{
+    *this = copy;
+}
+
+
+
 FragTrap::FragTrap(std::string name) 
 {
     this->Name = name;
@@ -46,4 +54,13 @@ void FragTrap::highFivesGuys(void)
 FragTrap::~FragTrap()
 {
     std::cout << this->Name << "  Good bye FragTrap !!"<< std::endl;
+}
+
+void	FragTrap::operator=(const FragTrap &X )
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    this->Name = X.Name;
+    this->Hit = X.Hit;
+    this->Energy = X.Energy;
+    this->Attack_damage = X.Attack_damage;
 }

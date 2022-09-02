@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 17:49:06 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/17 15:26:29 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/01 11:41:25 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 ScavTrap::ScavTrap() 
 {
 }
+ScavTrap::ScavTrap(ScavTrap const &copy)
+{
+    *this = copy;
+}
+
 ScavTrap::ScavTrap(std::string name) 
 {
     this->Name = name;
@@ -44,4 +49,14 @@ void	ScavTrap::guardGate()
 ScavTrap::~ScavTrap()
 {
     std::cout << this->Name << "  :  good bye ScavTrap !!"<< std::endl;
+}
+
+
+void	ScavTrap::operator=(const ScavTrap &X )
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    this->Name = X.Name;
+    this->Hit = X.Hit;
+    this->Energy = X.Energy;
+    this->Attack_damage = X.Attack_damage;
 }

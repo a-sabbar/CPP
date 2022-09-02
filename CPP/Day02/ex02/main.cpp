@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/11 17:57:42 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/15 12:24:10 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/02 14:56:53 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 int main( void ) {
     Fixed a;
-    Fixed c(10);
     Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
     std::cout << a << std::endl;

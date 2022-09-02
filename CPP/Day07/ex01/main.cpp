@@ -5,23 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 14:47:29 by asabbar           #+#    #+#             */
-/*   Updated: 2022/09/01 11:34:14 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/28 18:38:28 by asabbar           #+#    #+#             */
+/*   Updated: 2022/09/02 12:03:53 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-
+#include <iostream>
+#include "Iter.hpp"
 int main()
 {
-    ClapTrap A("achraf");
-    ClapTrap B("sabbar");
-
-    A.attack("sabbar");
-    B.takeDamage(0);
-    A.attack("sabbar");
-    B.takeDamage(0);
-    A.attack("sabbar");
-    B.takeDamage(0);
-    B.beRepaired(10);
+    int arry[4] ={ 1, 3, 3, 7};
+    iter(arry, 4, function);
+    char arry1[7] ={ ' ', 'a', 'c', 'h', 'r', 'a', 'f'};
+    iter(arry1, 7, function);
+    std::cout << std::endl;
 }

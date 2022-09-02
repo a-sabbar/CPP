@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 14:47:29 by asabbar           #+#    #+#             */
-/*   Updated: 2022/09/01 11:34:14 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/28 18:41:07 by asabbar           #+#    #+#             */
+/*   Updated: 2022/09/02 12:02:53 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef ITER_HPP
+# define ITER_HPP
 
-int main()
+# include <iostream>
+# include <string>
+
+template <typename t>
+
+void iter(t arr[], int len, void (*f)(t arr))
 {
-    ClapTrap A("achraf");
-    ClapTrap B("sabbar");
+	int i;
 
-    A.attack("sabbar");
-    B.takeDamage(0);
-    A.attack("sabbar");
-    B.takeDamage(0);
-    A.attack("sabbar");
-    B.takeDamage(0);
-    B.beRepaired(10);
+	i = -1;
+	while(++i < len)
+		f(arr[i]);
 }
+
+template <typename t>
+void function(t arr)
+{
+	std::cout << arr;
+}
+#endif

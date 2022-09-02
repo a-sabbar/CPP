@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 14:21:07 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/20 23:42:42 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/30 16:20:02 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ class Form
 		~Form();
 		class GradeTooHighException: public std::exception
 		{
-			virtual const char* what() const throw();
+			const char* what() const throw();
 		} high_e;
 		class GradeTooLowException: public std::exception
 		{
-			virtual const char* what() const throw();
+			const char* what() const throw();
 		}low_e;
 };
 std::ostream &operator<<(std::ostream &output, Form &X );

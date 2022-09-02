@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/13 14:01:07 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 11:30:10 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/08/29 14:37:08 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,25 +63,6 @@ void Fixed::operator=(const Fixed &X )
     this->fixed_value = X.getRawBits();
 }
 
-
-
-
-Fixed Fixed::operator*(const Fixed &X )
-{
-    this->fixed_value *= (int)roundf(X.toFloat());
-    return (*this);
-}
-
-
-
-
-Fixed Fixed::operator+(const Fixed &X )
-{
-    this->fixed_value += X.toFloat();
-    return (*this);
-}
-
-
 Fixed Fixed::operator++(void)
 {
     this->fixed_value++;
@@ -113,24 +94,42 @@ Fixed Fixed::operator--(int)
     return (C);
 }
 
+Fixed Fixed::operator*(const Fixed &X )
+{
+    Fixed C;
+
+    C.fixed_value = (this->toFloat() * X.toFloat()) * (1 << this->f_bit);
+    return (C);
+}
+
+Fixed Fixed::operator+(const Fixed &X )
+{
+    Fixed C;
+
+    C.fixed_value = (this->toFloat() + X.toFloat()) * (1 << this->f_bit);
+    return (C);
+}
 
 Fixed Fixed::operator-(const Fixed &X )
 {
+    Fixed C;
 
-    this->fixed_value -= X.toFloat();
-    return (*this);
+    C.fixed_value = (this->toFloat() - X.toFloat()) / (1 << this->f_bit);
+    return (C);
 }
 
 
 Fixed Fixed::operator/(const Fixed &X )
 {
-    this->fixed_value = X.toFloat();
-    return (*this);
+    Fixed C;
+
+    C.fixed_value = (this->toFloat() / X.toFloat()) * (1 << this->f_bit);
+    return (C);
 }
 
 bool Fixed::operator<(const Fixed &X )
 {
-    if(this->fixed_value < X.toFloat())
+    if(this->fixed_value < X.getRawBits())
         return(true);
     else
         return(false);
@@ -138,7 +137,7 @@ bool Fixed::operator<(const Fixed &X )
 
 bool Fixed::operator>(const Fixed &X )
 {
-    if(this->fixed_value > X.toFloat())
+    if(this->fixed_value > X.getRawBits())
         return(true);
     else
         return(false);
@@ -147,7 +146,7 @@ bool Fixed::operator>(const Fixed &X )
 
 bool Fixed::operator<=(const Fixed &X )
 {
-    if(this->fixed_value <= X.toFloat())
+    if(this->fixed_value <= X.getRawBits())
         return(true);
     else
         return(false);
@@ -155,7 +154,21 @@ bool Fixed::operator<=(const Fixed &X )
 
 bool Fixed::operator>=(const Fixed &X )
 {
-    if(this->fixed_value >= X.toFloat())
+    if(this->fixed_value >= X.getRawBits())
+        return(true);
+    else
+        return(false);
+}
+bool Fixed::operator==(const Fixed &X )
+{
+    if(this->fixed_value == X.getRawBits())
+        return(true);
+    else
+        return(false);
+}
+bool Fixed::operator!=(const Fixed &X )
+{
+    if(this->fixed_value != X.getRawBits())
         return(true);
     else
         return(false);

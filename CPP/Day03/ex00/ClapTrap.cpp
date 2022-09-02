@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 14:47:27 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/15 18:39:49 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/01 11:36:21 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 ClapTrap::ClapTrap()
 {
+}
+ClapTrap::ClapTrap(ClapTrap const &copy)
+{
+    *this = copy;
 }
 ClapTrap::ClapTrap(std::string name) : Name(name), Hit(10), Energy(10), Attack_damage(0)
 {
@@ -60,4 +64,13 @@ void	ClapTrap::beRepaired(unsigned int amount)
 ClapTrap::~ClapTrap()
 {
         std::cout << this->Name << "  :  good bye !!"<< std::endl;
+}
+
+void	ClapTrap::operator=(const ClapTrap &X )
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    this->Name = X.Name;
+    this->Hit = X.Hit;
+    this->Energy = X.Energy;
+    this->Attack_damage = X.Attack_damage;
 }

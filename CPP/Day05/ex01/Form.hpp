@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 14:21:07 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/30 16:20:02 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:50:11 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Form
 		const		int grade_s;
 		const		int grade_e;
 	public:
+		Form();
 		Form(std::string name, int g_s, int g_e);
 		std::string			getName();	
 		bool				getSign();

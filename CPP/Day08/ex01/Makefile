@@ -4,9 +4,10 @@ GG = c++
 
 VERSION = -std=c++98  -Wall -Wextra -Werror
 
-HEADER = Iter.hpp
+HEADER = Span.hpp
 
 SRC =	main.cpp		\
+		Span.cpp		\
 
 OBJECTS = $(SRC:.cpp=.opp)
 

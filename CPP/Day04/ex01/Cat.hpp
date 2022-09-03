@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:01:43 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 16:51:24 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:35:11 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ class Cat: public Animal
 		Cat();
 		Cat(const Cat &obj);
 		void	makeSound()const;
-		virtual ~Cat();
+		~Cat();
+		void	operator=(const Cat &X );
 };
 
 

@@ -6,13 +6,15 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 22:48:38 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/30 16:02:24 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:51:29 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
 
+RobotomyRequestForm::RobotomyRequestForm()
+{}
 RobotomyRequestForm::RobotomyRequestForm(std::string target)
 {
     this->target = target;

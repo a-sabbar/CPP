@@ -3,22 +3,27 @@
 
 # include <iostream>
 # include <string>
+# include <exception>
+#include <vector>
 
 class Span
 {
-
+	private:
+		unsigned int	N;
+		unsigned int	count;
+		std::vector<int> 	stack;
 	public:
 
 		Span();
-		Span( Span const & src );
+		Span(unsigned int N);
+		void	addNumber(int nb);
+		int		shortestSpan();
+		int		longestSpan();
 		~Span();
-
-		Span &		operator=( Span const & rhs );
-
-	private:
-
+		class exp : public std::exception
+		{
+			const char* what() const throw();
+		};
 };
-
-std::ostream &			operator<<( std::ostream & o, Span const & i );
 
 #endif

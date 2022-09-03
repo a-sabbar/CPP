@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:01:33 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 16:17:14 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:43:04 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Dog: public Animal
 		Dog(const Dog & obj);
 		void	makeSound()const;
 		~Dog();
+		void	operator=(const Dog &X );
 };
 
 #endif 

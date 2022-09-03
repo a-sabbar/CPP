@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 12:31:58 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 13:51:51 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:29:40 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ class WrongAnimal
 		std::string type;
 	public:
 		WrongAnimal();
+		WrongAnimal(WrongAnimal const &copy);
 		std::string		getType()const;	
 		void			makeSound(void)const;
 		~WrongAnimal();
-
+		void	operator=(const WrongAnimal &X );
 };
 
 

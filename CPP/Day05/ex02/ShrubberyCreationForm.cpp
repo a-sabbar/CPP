@@ -6,12 +6,16 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/21 16:06:38 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/21 17:50:15 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:51:47 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
+ShrubberyCreationForm::ShrubberyCreationForm()
+{
+
+}
 ShrubberyCreationForm::ShrubberyCreationForm(std::string	trg)
 {
 	this->target = trg;

@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:01:39 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 17:19:36 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:47:29 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Dog::Dog()
 }
 Dog::Dog(const Dog & obj)
 {
+	*this = obj;
 	this->B = new Brain(*(obj.B));
 	std::cout << "Copy Constructor Dog" << std::endl;
 }
@@ -35,4 +36,11 @@ Dog::~Dog()
 {
 	delete(this->B);
 	std::cout << "Destructor Dog" << std::endl;	
+}
+
+void	Dog::operator=(const Dog &X )
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    this->type = X.type;
+    this->B = X.B;
 }

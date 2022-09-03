@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 23:01:51 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 13:52:22 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/03 11:27:30 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ class Animal
 		std::string type;
 	public:
 		Animal();
+		Animal(Animal const &copy);
 		std::string		getType()const;
 		virtual void	makeSound()const;
+		void	operator=(const Animal &X );
 		~Animal();
 };
 

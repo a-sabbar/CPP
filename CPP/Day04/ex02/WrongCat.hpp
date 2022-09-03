@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/19 13:43:37 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/19 13:43:38 by asabbar          ###   ########.fr       */
+/*   Created: 2022/08/19 13:43:51 by asabbar           #+#    #+#             */
+/*   Updated: 2022/09/03 11:30:24 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ class WrongCat : public WrongAnimal
 
 	public:
 		WrongCat();
+		WrongCat(WrongCat const &copy);
 		void	makeSound(void)const;
 		~WrongCat();
-
+		void	operator=(const WrongCat &X );
 };
 
 #endif

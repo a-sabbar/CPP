@@ -1,10 +1,10 @@
-NAME = Array
+NAME = MutantStack
 
 GG = c++
 
 VERSION = -std=c++98  -Wall -Wextra -Werror
 
-HEADER = Array.hpp
+HEADER = MutantStack.hpp
 
 SRC =	main.cpp		\
 

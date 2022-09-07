@@ -6,15 +6,16 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 14:47:27 by asabbar           #+#    #+#             */
-/*   Updated: 2022/09/01 11:42:28 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/07 16:32:45 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap() : Hit(10), Energy(10), Attack_damage(0)
 {
+    std::cout << "ClapTrap  :  Hi !!"<< std::endl;  
 }
 
 ClapTrap::ClapTrap(ClapTrap const &copy)
@@ -54,9 +55,9 @@ void	ClapTrap::takeDamage(unsigned int amount)
             this->Hit -= amount;
         }
     }
-    else if(this->Hit)
+    else if(!this->Hit)
         std::cout << "-> He is died     ToT\n";
-    else
+    else if (!this->Energy)
         std::cout << "-> i don't have Energy\n";
 }
 
@@ -64,16 +65,12 @@ void	ClapTrap::beRepaired(unsigned int amount)
 {
     if(this->Hit && this->Energy)
     {
-        std::cout << "-> Repaired " << amount << std::endl;
+        std::cout <<this->Name <<" -> Repaired " << amount << std::endl;
         this->Hit += amount;
     }
+    else
+        std::cout<<this->Name <<" : out the game !!! Hit : " << Hit << " Energy :" << Energy<< std::endl;     
 }
-
-ClapTrap::~ClapTrap()
-{
-    std::cout << this->Name << "  :  good bye ClapTrap !!"<< std::endl;
-}
-
 
 void	ClapTrap::operator=(const ClapTrap &X )
 {
@@ -83,3 +80,9 @@ void	ClapTrap::operator=(const ClapTrap &X )
     this->Energy = X.Energy;
     this->Attack_damage = X.Attack_damage;
 }
+
+ClapTrap::~ClapTrap()
+{
+    std::cout << this->Name << "  :  good bye ClapTrap !!"<< std::endl;
+}
+

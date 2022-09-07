@@ -6,14 +6,18 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 17:49:06 by asabbar           #+#    #+#             */
-/*   Updated: 2022/09/01 11:43:31 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/07 16:32:58 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() 
+ScavTrap::ScavTrap()
 {
+    this->Hit = 100;
+    this->Energy = 50;
+    this->Attack_damage = 20;
+    std::cout << "ScavTrap  :  Hi ScavTrap !!"<< std::endl;
 }
 ScavTrap::ScavTrap(ScavTrap const &copy)
 {
@@ -29,7 +33,7 @@ ScavTrap::ScavTrap(std::string name)
     std::cout << name << "  :  Hi ScavTrap !!"<< std::endl;
 }
 
-void	ScavTrap::attack(const std::string& target)
+void	ScavTrap::attack(const std::string &target)
 {
     if (this->Hit && this->Energy)
     {
@@ -43,7 +47,7 @@ void	ScavTrap::attack(const std::string& target)
 
 void	ScavTrap::guardGate()
 {
-    std::cout << " Guard Gat  ^__^ " << std::endl;
+    std::cout <<Name << " : Mode Guard Gat 😫" << std::endl;
 }
 
 ScavTrap::~ScavTrap()

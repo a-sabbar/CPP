@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:39:35 by asabbar           #+#    #+#             */
-/*   Updated: 2022/09/01 11:44:30 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/07 16:37:49 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class FragTrap  : public ClapTrap
 		FragTrap(const FragTrap  &copy);
 		void	operator=(const FragTrap &X );
 		FragTrap(std::string name);
-		void	attack(const std::string& target);
 		void highFivesGuys(void);
 		~FragTrap();
 };

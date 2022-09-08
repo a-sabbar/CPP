@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 14:47:27 by asabbar           #+#    #+#             */
-/*   Updated: 2022/09/07 16:32:45 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/08 14:16:22 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	ClapTrap::attack(const std::string& target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-    if(this->Hit && this->Energy)
+    if(this->Hit)
     {
         if(amount > (unsigned int)this->Hit)
         {
@@ -57,8 +57,6 @@ void	ClapTrap::takeDamage(unsigned int amount)
     }
     else if(!this->Hit)
         std::cout << "-> He is died     ToT\n";
-    else if (!this->Energy)
-        std::cout << "-> i don't have Energy\n";
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
@@ -67,6 +65,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
     {
         std::cout <<this->Name <<" -> Repaired " << amount << std::endl;
         this->Hit += amount;
+        this->Energy--;
     }
     else
         std::cout<<this->Name <<" : out the game !!! Hit : " << Hit << " Energy :" << Energy<< std::endl;     

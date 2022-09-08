@@ -6,13 +6,13 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 17:49:06 by asabbar           #+#    #+#             */
-/*   Updated: 2022/09/07 16:27:39 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/07 17:44:16 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap()
 {
     this->Hit = 100;
     this->Energy = 50;
@@ -24,7 +24,7 @@ ScavTrap::ScavTrap(ScavTrap const &copy)
     *this = copy;
 }
 
-ScavTrap::ScavTrap(std::string name) 
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     this->Name = name;
     this->Hit = 100;

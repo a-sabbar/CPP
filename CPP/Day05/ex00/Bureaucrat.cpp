@@ -6,7 +6,7 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 22:58:26 by asabbar           #+#    #+#             */
-/*   Updated: 2022/08/20 22:22:30 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/08 11:22:09 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 Bureaucrat::Bureaucrat()
 {
 }
+
 Bureaucrat::Bureaucrat(const std::string A, int G) : name(A), grade(G)
 {
     if(this->grade < 1 )

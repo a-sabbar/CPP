@@ -6,14 +6,14 @@
 /*   By: asabbar <asabbar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:39:16 by asabbar           #+#    #+#             */
-/*   Updated: 2022/09/07 16:37:57 by asabbar          ###   ########.fr       */
+/*   Updated: 2022/09/07 17:44:32 by asabbar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap() 
+FragTrap::FragTrap() : ClapTrap()
 {
     std::cout << this->Name << "  hi FragTrap !!"<< std::endl;
 }
@@ -23,7 +23,7 @@ FragTrap::FragTrap(FragTrap const &copy)
     *this = copy;
 }
 
-FragTrap::FragTrap(std::string name) 
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
     this->Name = name;
     this->Hit = 100;
